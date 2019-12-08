@@ -1,0 +1,20 @@
+.page_content{
+    margin:0 16.2% 0 18%;
+    text-align: justify;
+}
+
+.center{
+    margin-top: 0px;
+    text-align: center;
+}
+
+.clearfix {
+    display: block;
+}
+
+.clearfix:after{
+    content:'';
+    display: table;
+    width: 100%;
+    clear: both;
+}

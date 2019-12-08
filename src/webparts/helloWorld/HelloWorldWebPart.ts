@@ -25,7 +25,10 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
       }
     );
 
-    ReactDom.render(element, this.domElement);
+    ReactDom.render(
+      element,
+      this.domElement
+       );
   }
 
   protected get dataVersion(): Version {
