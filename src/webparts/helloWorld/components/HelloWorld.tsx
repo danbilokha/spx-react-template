@@ -18,8 +18,9 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
         <Header/>
         <BrowserRouter history={history}>
           <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="" component={NotFound}/>
+            {/* TODO: FIX ME. Path should be '/' */}
+            <Route exact path="/temp/workbench.html" component={Home}/>
+            <Route path="*" component={NotFound}/>
           </Switch>
         </BrowserRouter>
       </div>
