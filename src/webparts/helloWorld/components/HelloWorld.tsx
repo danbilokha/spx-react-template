@@ -15,13 +15,16 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public render(): React.ReactElement<IHelloWorldProps> {
     return (
       <div className={styles.helloWorld}>
-        <Header/>
         <BrowserRouter history={history}>
-          <Switch>
-            {/* TODO: FIX ME. Path should be '/' */}
-            <Route exact path="/temp/workbench.html" component={Home}/>
-            <Route path="*" component={NotFound}/>
-          </Switch>
+          <div>
+            <Header/>
+            <Switch>
+              {/* TODO: FIX ME. Path should be '/' */}
+              <Route exact path="/temp/workbench.html" component={Home}/>
+              <Route exact path="/" component={Home}/>
+              <Route path="*" component={NotFound}/>
+            </Switch>
+          </div>
         </BrowserRouter>
       </div>
     );

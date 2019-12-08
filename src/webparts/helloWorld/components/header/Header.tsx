@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styles from './Header.module.scss';
+import {Link} from 'react-router-dom';
 
 const logo: any = require('../../assets/header/ITM_logo.gif');
 
@@ -9,21 +10,23 @@ export default class Header extends React.Component<{}, {}> {
         <div>
             <div className={styles.TopBar}>
                 <div className="Logo">
-                  <a href="/kafedra_ITM">
+                  <Link to="/">
                       <img alt="ITM ITS" src={logo} id="ITM_logo"/>
-                  </a>
+                  </Link>
                 </div>
-                <button className='header_button_enter'>Вхід</button>
+                <Link to='/auth'>
+                  <button className='header_button_enter'>Вхід</button>
+                </Link>
             </div>
             <div className={styles.header}>
               <div className={styles["header-link"]}>
-                <a href='#'>Study</a>
+                <Link to='#'>Study</Link>
               </div>
               <div className={styles["header-link"]}>
-                <a href='#'>Scientific research</a>
+                <Link to='#'>Scientific research</Link>
               </div>
               <div className={styles["header-link"]}>
-                <a href='#'>About faculty</a>
+                <Link to='#'>About faculty</Link>
               </div>
             </div>
         </div>
